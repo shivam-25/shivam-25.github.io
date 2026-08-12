@@ -1,171 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shivam Dixit — Resume — Forward Deployed Engineer</title>
-<meta name="description" content="Resume of Shivam Dixit, Forward Deployed Engineer and senior backend engineer. Rust, Go, Java, Kafka, ClickHouse, Solidity.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23061220'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial' font-size='30' font-weight='bold' fill='%2384D8E8' text-anchor='middle'%3ESD%3C/text%3E%3C/svg%3E">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Dixit — Résumé</title>
+<meta name="description" content="Résumé of Shivam Dixit, Forward Deployed Engineer and senior backend engineer.">
 <style>
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:#0b1420;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;color:#1b1f24;-webkit-font-smoothing:antialiased}
-.tools{position:sticky;top:0;z-index:10;background:rgba(6,18,32,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);padding:12px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.tools .nm{color:#84d8e8;font-weight:700;letter-spacing:.3px;margin-right:auto;font-size:14px}
-.tb{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:9px;font-size:13.5px;font-weight:600;text-decoration:none;border:1px solid rgba(132,216,232,.3);color:#e8f2f8;background:rgba(255,255,255,.05);cursor:pointer;font-family:inherit}
-.tb:hover{border-color:#84d8e8;background:rgba(132,216,232,.12)}
-.tb.pri{background:linear-gradient(120deg,#4fb0c6,#84d8e8);color:#04121a;border-color:transparent}
-.hint{color:#8ea9bd;font-size:12px;width:100%;margin-top:2px}
-.page{background:#fff;max-width:830px;margin:26px auto;padding:46px 52px 52px;border-radius:6px;box-shadow:0 30px 80px -40px #000;font-size:13.4px;line-height:1.5}
-h1{font-size:29px;margin:0;letter-spacing:-.6px;text-align:center;font-weight:700}
-.tt{text-align:center;font-size:14px;font-weight:600;color:#0f5f74;margin:4px 0 6px;letter-spacing:.2px}
-.ct{text-align:center;font-size:12.3px;color:#3d4753;margin-bottom:18px}
-.ct a{color:#0f5f74;text-decoration:none}
-h2{font-size:12.4px;text-transform:uppercase;letter-spacing:1.4px;border-bottom:1.4px solid #1b1f24;padding-bottom:3px;margin:20px 0 10px}
-.sum{margin:0 0 4px}
-.row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:11px}
-.row .l{font-weight:700;font-size:13.8px}
-.row .r{font-size:12.3px;color:#3d4753;white-space:nowrap}
-.row2{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
-.row2 .l{font-style:italic;font-size:13px}
-.row2 .r{font-size:12.3px;color:#3d4753;font-style:italic;white-space:nowrap}
-ul{margin:5px 0 0;padding-left:19px}
-li{margin-bottom:3.5px}
-.sk{margin:3px 0}
-.sk b{display:inline-block;min-width:104px}
-.acc{margin:4px 0}
-.acc b{color:#0f5f74}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#1a1d24;--soft:#4a5261;--dim:#7a8394;--line:#e2e6ec;--accent:#0f766e;--bg:#ffffff}
+body{background:#f4f6f8;color:var(--ink);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;line-height:1.5;font-size:14px;-webkit-font-smoothing:antialiased}
+.bar{position:sticky;top:0;z-index:10;background:var(--ink);color:#fff;padding:10px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.bar .n{font-size:14px;font-weight:600}
+.bar .acts{display:flex;gap:10px}
+.bar a,.bar button{font-size:12.5px;font-family:inherit;font-weight:500;padding:7px 14px;border-radius:6px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;cursor:pointer;text-decoration:none;transition:.15s}
+.bar a:hover,.bar button:hover{background:rgba(255,255,255,.12)}
+.bar .dl{background:var(--accent);border-color:var(--accent)}
+.page{max-width:820px;margin:22px auto;background:var(--bg);padding:44px 52px;box-shadow:0 1px 3px rgba(0,0,0,.08);border-radius:4px}
+h1{font-size:27px;font-weight:700;letter-spacing:-.01em}
+.role-line{font-size:14.5px;color:var(--accent);font-weight:600;margin-top:2px}
+.contact{font-size:12.5px;color:var(--soft);margin-top:8px}
+.contact a{color:var(--soft);text-decoration:none}
+.contact a:hover{color:var(--accent)}
+h2{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border-bottom:1.5px solid var(--line);padding-bottom:4px;margin:20px 0 10px}
+.summary{font-size:13.5px;color:var(--soft);line-height:1.55}
+.entry{margin-bottom:12px}
+.entry:last-child{margin-bottom:0}
+.eh{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.eh .t{font-size:14.5px;font-weight:600}
+.eh .d{font-size:12px;color:var(--dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+.sub{font-size:12.5px;font-style:italic;color:var(--soft);margin-bottom:4px}
+ul{list-style:none;margin-top:3px}
+li{font-size:13px;color:var(--soft);padding-left:14px;position:relative;margin-bottom:2px;line-height:1.45}
+li::before{content:'';position:absolute;left:2px;top:8px;width:4px;height:4px;border-radius:50%;background:var(--accent)}
+.skills p{font-size:13px;margin-bottom:3px}.skills b{color:var(--ink)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2px 24px}
 @media print{
-  body{background:#fff}
-  .tools{display:none}
-  .page{box-shadow:none;margin:0;max-width:none;padding:0;border-radius:0;font-size:10.4pt;line-height:1.34}
-  h1{font-size:19pt}
-  h2{font-size:9.6pt;margin:11pt 0 5pt}
-  .row{margin-top:7pt}
-  .row .l{font-size:10.8pt}
-  li{margin-bottom:1.6pt}
-  @page{margin:14mm 14mm}
+  body{background:#fff;font-size:11.5px}
+  .bar{display:none}
+  .page{margin:0;box-shadow:none;max-width:100%;padding:0;border-radius:0}
+  @page{margin:13mm}
+  h2{margin:12px 0 6px}
+  .entry{margin-bottom:8px}
 }
-@media(max-width:640px){.page{padding:26px 20px;margin:14px 10px}}
 </style>
 </head>
 <body>
-<div class="tools">
-  <span class="nm">Shivam Dixit &mdash; R&eacute;sum&eacute;</span>
-  <a class="tb" href="index.html">&larr; Portfolio</a>
-  <a class="tb" href="https://www.linkedin.com/in/shivam-dixit-fde/" target="_blank" rel="noopener">LinkedIn</a>
-  <button class="tb pri" onclick="window.print()">Download PDF</button>
-  <span class="hint">Tip: in the print dialog choose &ldquo;Save as PDF&rdquo;, set margins to Default and switch backgrounds off for the cleanest ATS-readable file.</span>
+
+<div class="bar">
+  <div class="n">Shivam Dixit — Résumé</div>
+  <div class="acts">
+    <a href="index.html">← Portfolio</a>
+    <button class="dl" onclick="window.print()">Download PDF</button>
+  </div>
 </div>
 
 <div class="page">
-<h1>Shivam Dixit</h1>
-<div class="tt">Forward Deployed Engineer &middot; Senior Software Engineer &middot; Real-Time &amp; Distributed Systems</div>
-<div class="ct">
-Bengaluru, India &middot; <a href="mailto:shivamdixit7077@gmail.com">shivamdixit7077@gmail.com</a> &middot; linkedin.com/in/shivam-dixit-fde &middot; github.com/shivam-25 &middot; shivam-25.github.io
-</div>
+  <header>
+    <h1>Shivam Dixit</h1>
+    <div class="role-line">Forward Deployed Engineer · Senior Backend Engineer</div>
+    <div class="contact">
+      Bengaluru, India · <a href="mailto:shivamdixit7077@gmail.com">shivamdixit7077@gmail.com</a>
+      · <a href="https://www.linkedin.com/in/shivam-dixit-fde/">linkedin.com/in/shivam-dixit-fde</a>
+      · <a href="https://github.com/shivam-25">github.com/shivam-25</a>
+    </div>
+  </header>
 
-<h2>Summary</h2>
-<p class="sum">Forward Deployed Engineer and senior backend engineer with six years building production systems at American Express, Goldman Sachs, BlackRock and ZestMoney, plus four products of my own live in production today. I work end to end: sit with users, translate the workflow into an architecture, ship it, and own the operational tail. Deep in real-time data and distributed systems (Rust, Go, Java, Kafka, NATS JetStream, ClickHouse) and on-chain rails (Solidity, Quorum, Solana). AI-native by default &mdash; Claude Code, Cursor and Codex with a maintained agent skill library sit inside my daily delivery loop. Currently in Cohort 3 of the FDE Academy PGP in Forward Deployed Engineering and Applied AI Solutions.</p>
+  <h2>Summary</h2>
+  <p class="summary">Backend and platform engineer with 6 years shipping production-grade systems at American Express, Goldman Sachs and BlackRock, plus founding-engineer and lead roles across four live products. I build trading infrastructure, real-time data pipelines at scale, on-chain systems and enterprise platforms in Rust, Go and Java — and I work AI-native with Claude Code, Cursor and Codex to move from spec to reviewed production code faster.</p>
 
-<h2>Technical Skills</h2>
-<div class="sk"><b>Languages</b> Java, Rust, Go, Python, JavaScript, TypeScript, Solidity, SQL</div>
-<div class="sk"><b>Frameworks</b> Spring Boot, Node.js, Express, Angular, Actix, JUnit, Maven</div>
-<div class="sk"><b>Event-driven</b> Apache Kafka, NATS JetStream, AWS SQS, AWS SNS, AWS Lambda, Apache Flink</div>
-<div class="sk"><b>Databases</b> ClickHouse, PostgreSQL, MySQL, MongoDB, Cassandra, Redis, LMDB, Elasticsearch</div>
-<div class="sk"><b>AI-native</b> Claude Code, Cursor, Codex, agent skills, MCP, RAG, prompt engineering, evals</div>
-<div class="sk"><b>APIs</b> REST, GraphQL, WebSockets, gRPC-style streaming</div>
-<div class="sk"><b>Blockchain</b> Solana (RPC, on-chain indexing), EVM chains, Solidity, Quorum, ERC-4626, Pyth</div>
-<div class="sk"><b>Infrastructure</b> Kubernetes, Docker, Prometheus, Grafana, AWS (EC2, S3, Lambda), Nginx, PM2</div>
-<div class="sk"><b>Practices</b> Distributed systems design, event sourcing, exactly-once delivery, solution architecture, client discovery, production incident ownership</div>
+  <h2>Core Expertise</h2>
+  <ul>
+    <li><b>Trading &amp; market infrastructure</b> — order books, perpetuals matching, funding and liquidations; built engines sustaining 60 orders/second and a DEX across 20+ markets.</li>
+    <li><b>Real-time data at scale</b> — 10M+ events/day in Rust over NATS JetStream with exactly-once delivery, into ClickHouse at 490M+ rows.</li>
+    <li><b>Event-driven backend</b> — Java / Spring Boot microservices on Kafka, event sourcing, Spark/Hadoop and AWS-native async flows.</li>
+    <li><b>On-chain engineering</b> — Solidity contracts, ERC-4626 vaults, Pyth oracles, on-chain collateral/PnL and Quorum tokenization.</li>
+    <li><b>Enterprise platform delivery</b> — dual-database migration frameworks at 99.9% consistency, SAP integration and multi-bank maker/checker workflows.</li>
+  </ul>
 
-<h2>Professional Experience</h2>
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><b>Languages:</b> Rust, Go, Java, JavaScript, Python, SQL</p>
+    <p><b>Frameworks:</b> Spring Boot, Node.js, Express, Angular, Actix, JUnit, Maven</p>
+    <p><b>Event-Driven:</b> Apache Kafka, NATS JetStream, AWS SQS/SNS, Lambda, Apache Flink</p>
+    <p><b>Databases:</b> ClickHouse, PostgreSQL, MySQL, MongoDB, LMDB, Redis, Cassandra, Elasticsearch</p>
+    <p><b>Blockchain:</b> Solidity, EVM chains, Quorum, Pyth, ERC-4626, Solana (RPC, on-chain indexing)</p>
+    <p><b>Infrastructure:</b> Docker, Kubernetes, AWS (EC2, S3, Lambda), Nginx, Prometheus, Grafana, PM2</p>
+    <p><b>AI-native:</b> Claude Code, Cursor, Codex, agent &amp; skill-based workflows</p>
+  </div>
 
-<div class="row"><span class="l">American Express</span><span class="r">Bengaluru, India</span></div>
-<div class="row2"><span class="l">Software Development Engineer III</span><span class="r">Jan 2025 &ndash; Present</span></div>
-<ul>
-<li>Architected an enterprise-grade dual-database framework supporting concurrent DB2 and PostgreSQL operations with independent transaction boundaries, isolated exception handling, differential result logging and configuration-driven rollback.</li>
-<li>Engineered a data transformation pipeline handling 124+ parameters across stored procedures, consolidating flat DB2 structures into PostgreSQL composite types, managing type conversions and resolving out-of-order parameter dependencies while ensuring data integrity.</li>
-<li>Implemented production monitoring with automated result comparison, performance metrics collection, error categorisation and discrepancy detection, enabling real-time visibility into migration progress and establishing a 99.9% data-consistency validation benchmark.</li>
-<li>Built a blockchain-based lending protocol for crypto assets at the internal Amex hackathon.</li>
-</ul>
+  <h2>Professional Experience</h2>
+  <div class="entry">
+    <div class="eh"><span class="t">American Express — SDE III</span><span class="d">Jan 2025 – Present</span></div>
+    <div class="sub">Bengaluru</div>
+    <ul>
+      <li>Architected an enterprise dual-database DB2/PostgreSQL framework with independent transaction boundaries, isolated exception handling and configuration-driven rollback.</li>
+      <li>Engineered a 124+ parameter transformation pipeline consolidating flat DB2 structures into PostgreSQL composite types, resolving out-of-order dependencies while preserving integrity.</li>
+      <li>Built production monitoring with automated result comparison and discrepancy detection, reaching a 99.9% data-consistency benchmark; built a blockchain lending protocol at the AMEX hackathon.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">Filament Finance — Founding Engineer</span><span class="d">May 2024 – Jan 2025</span></div>
+    <div class="sub">Remote</div>
+    <ul>
+      <li>Built and launched a decentralized perpetual trading platform for BTC and SEI, including high-performance order-book management and a comb-pool model.</li>
+      <li>Designed a scalable backend on Spring Boot, Kafka, Redis and MongoDB supporting limit, market, take-profit and stop-loss orders, sustaining 60 orders/second via partitioned Kafka keys.</li>
+      <li>Delivered REST APIs and WebSocket channels for real-time order placement, and smart-contract integration for on-chain collateral and PnL management.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">Goldman Sachs — SDE II (Associate)</span><span class="d">Apr 2022 – Apr 2024</span></div>
+    <div class="sub">Bengaluru</div>
+    <ul>
+      <li>Built trade-flow timeliness and post-trade surveillance controls across the front-to-back architecture with integrated exception management.</li>
+      <li>Developed Java / Spring Boot + Kafka microservices for trade replay via REST, and big-data surveillance pipelines on Apache Spark and Hadoop.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">ZestMoney — SDE I</span><span class="d">Aug 2021 – Apr 2022</span></div>
+    <div class="sub">Gurugram</div>
+    <ul>
+      <li>Built event-driven microservices for loan creation, settlement and closure on Java, Spring Boot and AWS SQS/SNS with MySQL, plus high-performance risk-team APIs.</li>
+      <li>Built serverless loan-closure processing with AWS Lambda, Step Functions and S3, and a Cucumber BDD test suite for the team.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">BlackRock — Analyst</span><span class="d">Jul 2020 – Aug 2021</span></div>
+    <div class="sub">Gurugram</div>
+    <ul>
+      <li>Built ETF order-fulfilment backends for primary and secondary markets, and event-sourcing microservices on Java, Spring Boot, Kafka and Cassandra with resiliency and retry.</li>
+    </ul>
+  </div>
 
-<div class="row"><span class="l">Filament Finance</span><span class="r">Remote</span></div>
-<div class="row2"><span class="l">Founding Engineer</span><span class="r">May 2024 &ndash; Jan 2025</span></div>
-<ul>
-<li>Developed and launched a decentralized perpetual trading platform supporting BTC and SEI markets, owning the backend including high-performance order book management and a comb pool liquidity model.</li>
-<li>Designed and optimised a scalable backend on Java Spring Boot, Kafka, Redis and MongoDB supporting user-authenticated order management across limit, market, take-profit and stop-loss orders.</li>
-<li>Built and operated REST APIs and WebSocket connections for real-time order placement and updates.</li>
-<li>Leveraged Kafka partitioned keys for multi-threaded order processing, achieving up to 60 orders per second.</li>
-<li>Contributed to smart contract integration for on-chain collateral and PnL management.</li>
-</ul>
+  <h2>Key Projects</h2>
+  <div class="entry">
+    <div class="eh"><span class="t">ClickTrade — Data Infrastructure Lead</span><span class="d">Aug 2025 – Present</span></div>
+    <div class="sub">click.trade/discovery · Rust, NATS JetStream, ClickHouse</div>
+    <ul>
+      <li>Lead a real-time streaming pipeline in Rust ingesting 10M+ events/day across 20+ streams with exactly-once delivery and checkpoint-based recovery into distributed ClickHouse.</li>
+      <li>Built trader analytics and portfolio tracking (REST + WebSocket) with leaderboards, holder rankings and wallet classification across 490M+ position rows; own reliability and cost.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">Carry Exchange — Backend Engineer</span><span class="d">Jun 2025 – Present</span></div>
+    <div class="sub">carry.exchange · Solidity, Go, ERC-4626, Pyth</div>
+    <ul>
+      <li>Built a decentralized perpetuals exchange with Solidity contracts (trading engine, vault, funding, oracle) and a Go backend across 20+ commodity, crypto and forex markets.</li>
+      <li>Delivered a 40+ endpoint production REST API with TradingView charts, dynamic funding, automated liquidations and ERC-4626 vaults; sub-second response via PostgreSQL, Redis and WebSocket.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">Whrrl Technologies — Backend Engineer</span><span class="d">Jun 2025 – Present</span></div>
+    <div class="sub">warehouses.whrrl.in · Quorum, Node.js, Angular, SAP, AWS</div>
+    <ul>
+      <li>Built warehouse-receipt tokenization (E-WHR) on a Quorum private chain, enabling 35,000+ farmers to obtain collateral-backed loans across 120,000+ MSWC receipts.</li>
+      <li>Built video-KYC consent, S3 document management and a 50+ bank maker/checker loan workflow with real-time SAP integration; own the AWS footprint and reconciliation tooling.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">Filament Perps DEX</span><span class="d">May 2024 – Jan 2025</span></div>
+    <div class="sub">app.filament.finance · Spring Boot, Kafka, smart contracts</div>
+    <ul>
+      <li>Live decentralized perpetual trading platform for BTC and SEI with a comb-pool model, order book sustaining 60 orders/second, and on-chain collateral and PnL settlement.</li>
+    </ul>
+  </div>
 
-<div class="row"><span class="l">Goldman Sachs</span><span class="r">Bengaluru, India</span></div>
-<div class="row2"><span class="l">Software Engineer II (Associate)</span><span class="r">Dec 2023 &ndash; Apr 2024</span></div>
-<ul>
-<li>Promoted to Associate on the post-trade surveillance platform after delivering the trade-replay control tooling below.</li>
-<li>Built scalable data pipelines for post-trade surveillance using Apache Spark and Hadoop across high-volume trade data.</li>
-<li>Created Python tooling that automated weekly report generation for the support team.</li>
-</ul>
-<div class="row2"><span class="l">Software Engineer (Analyst)</span><span class="r">Apr 2022 &ndash; Dec 2023</span></div>
-<ul>
-<li>Built control implementations and tooling for trade flow timeliness and completeness, plus post-trade surveillance controls across the front-to-back architecture with integrated exception management.</li>
-<li>Developed microservices on Java Spring Boot and Kafka enabling trade replay through REST calls for existing control implementations, and exposed Swagger endpoints for the support team.</li>
-</ul>
-
-<div class="row"><span class="l">ZestMoney</span><span class="r">Gurugram, India</span></div>
-<div class="row2"><span class="l">Software Development Engineer I</span><span class="r">Aug 2021 &ndash; Apr 2022</span></div>
-<ul>
-<li>Developed event-driven microservices for loan creation, settlements, payments and closure using Java, Spring Boot, AWS SQS and SNS with MySQL.</li>
-<li>Developed high-performance APIs enabling the risk team to access relevant customer and loan data.</li>
-<li>Conceptualised and built a scalable loan-closure system processing closures in an automated bulk manner via file upload, using AWS Lambda with Step Functions and S3.</li>
-<li>Created a Cucumber test suite to enable behaviour-driven development for the team.</li>
-</ul>
-
-<div class="row"><span class="l">BlackRock</span><span class="r">Gurugram, India</span></div>
-<div class="row2"><span class="l">Analyst</span><span class="r">Jul 2020 &ndash; Aug 2021</span></div>
-<ul>
-<li>Designed and developed backend applications for ETF order fulfilment, used to assist authorized participants trading in primary and secondary markets.</li>
-<li>Conceptualised and built microservices on an event-sourcing architecture using Java, Spring Boot, Kafka and Cassandra, with resiliency and retry mechanisms to ensure completeness.</li>
-</ul>
-
-<h2>Selected Product Work</h2>
-
-<div class="row"><span class="l">ClickTrade &mdash; click.trade/discovery</span><span class="r">Rust, ClickHouse, NATS</span></div>
-<div class="row2"><span class="l">Data Infrastructure Lead</span><span class="r">Aug 2025 &ndash; Present</span></div>
-<ul>
-<li>Built a real-time streaming pipeline in Rust ingesting 10M+ events daily across 20+ data streams using NATS JetStream, with exactly-once delivery and checkpoint-based recovery on ClickHouse distributed clusters.</li>
-<li>Built trader analytics and portfolio tracking (REST APIs plus WebSocket channels) powering leaderboards, holder rankings and wallet classification across 490M+ position rows in ClickHouse.</li>
-<li>Own production reliability, cost optimisation (replaced third-party APIs with on-chain RPC) and environment parity across dev and prod clusters.</li>
-</ul>
-
-<div class="row"><span class="l">Carry Exchange &mdash; carry.exchange, terminal.carry.exchange</span><span class="r">Solidity, Go</span></div>
-<div class="row2"><span class="l">Backend Engineer, Whrrl Technologies</span><span class="r">Jun 2025 &ndash; Present</span></div>
-<ul>
-<li>Built a decentralized perpetuals exchange with Solidity smart contracts (trading engine, vault, funding, oracle) and a Go microservices backend supporting market and limit orders with TP/SL across 20+ commodity, crypto, forex and index markets.</li>
-<li>Developed a production REST API (40+ endpoints) with TradingView charts, portfolio analytics and sub-second response times using PostgreSQL, Redis and WebSocket streaming.</li>
-<li>Implemented dynamic funding rates, automated liquidations, ERC-4626 liquidity vaults and Pyth oracle integration, deployed with Docker on a production VPS.</li>
-</ul>
-
-<div class="row"><span class="l">Whrrl E-WHR &mdash; warehouses.whrrl.in, bank.whrrl.in, admin.whrrl.in</span><span class="r">Quorum, Node.js</span></div>
-<div class="row2"><span class="l">Backend Engineer, Whrrl Technologies</span><span class="r">Jun 2025 &ndash; Present</span></div>
-<ul>
-<li>Built a warehouse receipt tokenization platform (E-WHR) on the Quorum private blockchain, enabling 35,000+ farmers to obtain collateral-backed loans across 120,000+ MSWC warehouse receipts in Maharashtra.</li>
-<li>Developed a multi-panel Node.js/Express and Angular 8 architecture with real-time SAP integration (customer master, WHR, lien, delivery APIs) processing 10,000+ receipts for MSWC.</li>
-<li>Built video KYC consent, S3 document management and a multi-bank loan workflow supporting 50+ cooperative banks with maker/checker approval flows.</li>
-<li>Owned production AWS infrastructure (EC2, S3, Nginx, PM2), incident response and account reconciliation tooling.</li>
-</ul>
-
-<h2>Education</h2>
-<div class="row"><span class="l">FDE Academy</span><span class="r">Cohort 3</span></div>
-<div class="row2"><span class="l">PGP in Forward Deployed Engineering &amp; Applied AI Solutions</span><span class="r">In progress</span></div>
-<div class="row"><span class="l">Vellore Institute of Technology</span><span class="r">Vellore, India</span></div>
-<div class="row2"><span class="l">Bachelor of Technology, Computer Science and Engineering (CGPA 9.06/10)</span><span class="r">Jul 2016 &ndash; Jun 2020</span></div>
-
-<h2>Live Products</h2>
-<div class="acc"><b>Whrrl Platform</b> &mdash; live E-WHR tokenization on Quorum: warehouses.whrrl.in, bank.whrrl.in, admin.whrrl.in, blockchain-node.whrrl.in</div>
-<div class="acc"><b>Carry Exchange</b> &mdash; live decentralized commodity perpetuals DEX: carry.exchange, terminal.carry.exchange</div>
-<div class="acc"><b>ClickTrade</b> &mdash; Solana trading analytics and Telegram bot: click.trade/discovery</div>
-<div class="acc"><b>Filament Perps DEX</b> &mdash; live perpetual trading platform with comb pool model: app.filament.finance</div>
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="eh"><span class="t">Vellore Institute of Technology — B.Tech, Computer Science &amp; Engineering</span><span class="d">Jul 2016 – Jun 2020</span></div>
+    <div class="sub">CGPA 9.06 / 10 · Vellore</div>
+  </div>
+  <div class="entry">
+    <div class="eh"><span class="t">The FDE Academy — Forward Deployed Engineer, Cohort 3</span><span class="d">2026</span></div>
+    <div class="sub">In progress</div>
+  </div>
 </div>
 </body>
 </html>
