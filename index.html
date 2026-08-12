@@ -1,0 +1,524 @@
+TEST-PASTE-123<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shivam Dixit — Forward Deployed Engineer</title>
+<meta name="description" content="Forward Deployed Engineer and senior backend engineer. Rust, Go, Java, Kafka, ClickHouse, Solidity. Live products in trading infrastructure and agri-fintech.">
+<meta name="author" content="Shivam Dixit">
+<meta property="og:title" content="Shivam Dixit — Forward Deployed Engineer">
+<meta property="og:description" content="I embed with teams and ship AI-native systems into production. Rust, Go, Java, Kafka, ClickHouse.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shivam-25.github.io/">
+<meta name="theme-color" content="#061220">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23061220'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial' font-size='30' font-weight='bold' fill='%2384D8E8' text-anchor='middle'%3ESD%3C/text%3E%3C/svg%3E">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#050b14; --bg2:#08131f; --panel:rgba(255,255,255,.035); --line:rgba(132,216,232,.16);
+  --txt:#e8f2f8; --mut:#8ea9bd; --acc:#84d8e8; --acc2:#4fb0c6; --warm:#f2a15a;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#net{position:fixed;inset:0;z-index:0;opacity:.55}
+#spot{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(560px circle at var(--mx,50%) var(--my,20%),rgba(79,176,198,.10),transparent 62%)}
+.wrap{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--acc2),var(--acc));z-index:60;width:0}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);background:rgba(5,11,20,.72);border-bottom:1px solid rgba(255,255,255,.06)}
+nav .inner{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:28px}
+.logo{font-weight:800;letter-spacing:.5px;color:var(--acc);text-decoration:none;font-size:17px}
+.logo span{color:var(--txt);font-weight:500;font-size:13px;margin-left:10px;letter-spacing:2px;text-transform:uppercase}
+nav .links{margin-left:auto;display:flex;gap:22px;flex-wrap:wrap}
+nav a.nl{color:var(--mut);text-decoration:none;font-size:13.5px;letter-spacing:.4px;transition:color .2s}
+nav a.nl:hover,nav a.nl.on{color:var(--acc)}
+section{padding:96px 0;position:relative}
+h2.st{font-size:clamp(26px,3.4vw,38px);margin:0 0 8px;letter-spacing:-.5px}
+.stlab{font-family:var(--mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--acc2);margin-bottom:14px}
+.sub{color:var(--mut);max-width:660px;margin:0 0 44px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+/* hero */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:7px 15px;background:rgba(132,216,232,.06)}
+.dot{width:7px;height:7px;border-radius:50%;background:#43d17f;box-shadow:0 0 0 0 rgba(67,209,127,.7);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(67,209,127,0)}100%{box-shadow:0 0 0 0 rgba(67,209,127,0)}}
+h1{font-size:clamp(42px,7.6vw,84px);line-height:1.02;margin:22px 0 6px;letter-spacing:-2.5px;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--acc),#b9e9f4 55%,var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-family:var(--mono);font-size:clamp(16px,2.3vw,25px);color:var(--acc);min-height:1.5em;letter-spacing:-.3px}
+.cursor{display:inline-block;width:10px;background:var(--acc);margin-left:3px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.lede{color:#b8cddb;font-size:clamp(15.5px,1.7vw,18.5px);max-width:680px;margin:22px 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:11px;text-decoration:none;font-size:14.5px;font-weight:600;border:1px solid var(--line);color:var(--txt);background:var(--panel);transition:transform .18s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--acc);background:rgba(132,216,232,.1)}
+.btn.pri{background:linear-gradient(120deg,var(--acc2),var(--acc));color:#04121a;border-color:transparent}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:34px}
+.badge{font-family:var(--mono);font-size:11.5px;color:var(--mut);border:1px solid rgba(255,255,255,.09);border-radius:7px;padding:6px 11px}
+.badge b{color:var(--txt);font-weight:600}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden}
+.stat{background:var(--bg2);padding:26px 22px}
+.stat .n{font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-1px;color:var(--acc)}
+.stat .l{font-size:12.5px;color:var(--mut);margin-top:4px;line-height:1.45}
+/* timeline */
+.tl{position:relative;padding-left:30px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--acc2),rgba(79,176,198,.06))}
+.job{position:relative;margin-bottom:16px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:var(--panel);overflow:hidden;transition:border-color .25s}
+.job:hover{border-color:var(--line)}
+.job::before{content:"";position:absolute;left:-30px;top:26px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--acc2)}
+.job.now::before{background:var(--acc);box-shadow:0 0 14px var(--acc)}
+.jh{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;padding:20px 22px;cursor:pointer;user-select:none}
+.jh h3{margin:0;font-size:18px;letter-spacing:-.3px}
+.jh .co{color:var(--acc);font-weight:600;font-size:15px}
+.jh .when{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--mut);white-space:nowrap}
+.jh .chev{color:var(--mut);transition:transform .3s;font-size:13px}
+.job.open .chev{transform:rotate(180deg)}
+.jb{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.2,.7,.2,1)}
+.jb ul{margin:0;padding:0 26px 22px 42px}
+.jb li{color:#adc4d4;font-size:14.5px;margin-bottom:8px}
+.jb li::marker{color:var(--acc2)}
+/* products */
+.chips{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:26px}
+.chip{font-family:var(--mono);font-size:12px;padding:8px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.11);background:transparent;color:var(--mut);cursor:pointer;transition:all .2s}
+.chip:hover{color:var(--txt);border-color:var(--acc2)}
+.chip.on{background:var(--acc);color:#04121a;border-color:var(--acc);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.card{border:1px solid rgba(255,255,255,.08);border-radius:16px;background:linear-gradient(160deg,rgba(255,255,255,.045),rgba(255,255,255,.012));padding:26px;transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:0 22px 50px -28px rgba(0,0,0,.9)}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--cx,50%) var(--cy,0%),rgba(132,216,232,.09),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::after{opacity:1}
+.card.hide{display:none}
+.ct{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.ct h3{margin:0;font-size:19px;letter-spacing:-.3px}
+.live{font-family:var(--mono);font-size:10.5px;color:#43d17f;border:1px solid rgba(67,209,127,.35);border-radius:5px;padding:2px 7px;letter-spacing:1px}
+.crole{font-family:var(--mono);font-size:12px;color:var(--acc2);margin:8px 0 12px}
+.card p{color:#a9c1d1;font-size:14.5px;margin:0 0 14px}
+.kv{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px}
+.kv div{font-size:12px;color:var(--mut)}
+.kv b{display:block;font-size:17px;color:var(--txt);font-weight:700;letter-spacing:-.4px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-family:var(--mono);font-size:11px;color:var(--mut);background:rgba(132,216,232,.07);border:1px solid rgba(132,216,232,.14);border-radius:6px;padding:3px 8px}
+.links{display:flex;gap:14px;flex-wrap:wrap}
+.links a{color:var(--acc);text-decoration:none;font-size:13px;font-family:var(--mono);border-bottom:1px solid transparent;transition:border-color .2s}
+.links a:hover{border-color:var(--acc)}
+/* terminal */
+.term{border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;background:#03090f;box-shadow:0 30px 70px -40px #000}
+.tbar{display:flex;align-items:center;gap:8px;padding:11px 15px;background:rgba(255,255,255,.045);border-bottom:1px solid rgba(255,255,255,.07)}
+.tbar i{width:11px;height:11px;border-radius:50%;display:block}
+.tbar span{font-family:var(--mono);font-size:11.5px;color:var(--mut);margin-left:8px}
+.tbody{font-family:var(--mono);font-size:13px;padding:20px;min-height:210px;white-space:pre-wrap;color:#bcd5e2;line-height:1.85}
+.tbody .p{color:var(--acc)}
+.tbody .g{color:#43d17f}
+.tbody .w{color:var(--warm)}
+/* stack */
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.sgrp{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:22px;background:var(--panel)}
+.sgrp h4{margin:0 0 14px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--acc2);font-family:var(--mono)}
+.sgrp .tags .tag{font-size:12px;padding:5px 10px}
+/* contact */
+#contact{text-align:center;padding-bottom:64px}
+#contact h2{font-size:clamp(30px,5vw,52px);letter-spacing:-1.5px;margin-bottom:14px}
+footer{border-top:1px solid rgba(255,255,255,.07);padding:26px 0;color:var(--mut);font-size:12.5px}
+footer .inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--mut);text-decoration:none}
+footer a:hover{color:var(--acc)}
+footer .r{margin-left:auto;font-family:var(--mono)}
+@media(max-width:720px){
+  nav .links{display:none}
+  section{padding:70px 0}
+  .jh .when{margin-left:0;width:100%}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}#net{display:none}}
+</style>
+</head>
+<body>
+<canvas id="net"></canvas>
+<div id="spot"></div>
+<div id="bar"></div>
+<nav><div class="inner">
+  <a class="logo" href="#hero">SD<span>Forward Deployed</span></a>
+  <div class="links">
+    <a class="nl" href="#work">Work</a>
+    <a class="nl" href="#products">Products</a>
+    <a class="nl" href="#ai">AI-Native</a>
+    <a class="nl" href="#stack">Stack</a>
+    <a class="nl" href="resume.html">Resume</a>
+    <a class="nl" href="#contact">Contact</a>
+  </div>
+</div></nav>
+<section id="hero"><div class="wrap">
+  <div class="eyebrow"><i class="dot"></i> Bengaluru, India &middot; open to Forward Deployed &amp; senior backend roles</div>
+  <h1>Shivam<br><em>Dixit</em></h1>
+  <div class="role"><span id="tw"></span><i class="cursor">&nbsp;</i></div>
+  <p class="lede">I embed with teams and ship AI-native systems into production &mdash; trading infrastructure, real-time data platforms and on-chain rails. Six years of backend engineering at American Express, Goldman Sachs and BlackRock, plus four products of my own running live today.</p>
+  <div class="cta">
+    <a class="btn pri" href="resume.html">View r&eacute;sum&eacute; &rarr;</a>
+    <a class="btn" href="https://www.linkedin.com/in/shivam-dixit-fde/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/shivam-25" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="mailto:shivamdixit7077@gmail.com">Email</a>
+  </div>
+  <div class="badges">
+    <div class="badge"><b>SDE III</b> American Express</div>
+    <div class="badge"><b>FDE Academy</b> Cohort 3 &middot; PGP in Forward Deployed Engineering</div>
+    <div class="badge">ex-<b>Goldman Sachs</b></div>
+    <div class="badge">ex-<b>BlackRock</b></div>
+    <div class="badge">ex-<b>Filament Finance</b> founding engineer</div>
+  </div>
+</div></section>
+
+<section id="numbers"><div class="wrap rv">
+  <div class="stats">
+    <div class="stat"><div class="n" data-to="10" data-suf="M+">0</div><div class="l">events ingested per day in Rust on ClickTrade</div></div>
+    <div class="stat"><div class="n" data-to="490" data-suf="M+">0</div><div class="l">position rows queried in ClickHouse</div></div>
+    <div class="stat"><div class="n" data-to="35000" data-suf="+">0</div><div class="l">farmers on the live Whrrl tokenization platform</div></div>
+    <div class="stat"><div class="n" data-to="60" data-suf="/s">0</div><div class="l">orders per second on the Filament perps engine</div></div>
+    <div class="stat"><div class="n" data-to="4" data-suf="">0</div><div class="l">products live in production right now</div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="rv"><div class="stlab">01 &mdash; Experience</div>
+  <h2 class="st">Six years of production backend</h2>
+  <p class="sub">Payments, capital markets, asset management and crypto derivatives. Click any role to expand.</p></div>
+  <div class="tl">
+    <div class="job now rv">
+      <div class="jh"><h3>Software Development Engineer III</h3><span class="co">American Express</span><span class="when">Jan 2025 &mdash; Present &middot; Bengaluru <i class="chev">&#9660;</i></span></div>
+      <div class="jb"><ul>
+        <li>Architected an enterprise-grade dual-database framework supporting concurrent DB2 and PostgreSQL operations with independent transaction boundaries, isolated exception handling and configuration-driven rollback.</li>
+        <li>Engineered a data transformation pipeline handling 124+ parameters across stored procedures, consolidating flat DB2 structures into PostgreSQL composite types and resolving out-of-order parameter dependencies.</li>
+        <li>Built production monitoring with automated result comparison, performance metrics and discrepancy detection, establishing a 99.9% data-consistency validation benchmark for the migration.</li>
+        <li>Built a blockchain lending protocol for crypto assets at the internal Amex hackathon.</li>
+      </ul></div>
+    </div>
+    <div class="job rv">
+      <div class="jh"><h3>Founding Engineer</h3><span class="co">Filament Finance</span><span class="when">May 2024 &mdash; Jan 2025 &middot; Remote <i class="chev">&#9660;</i></span></div>
+      <div class="jb"><ul>
+        <li>Built and launched a decentralized perpetual trading platform for BTC and SEI markets, including the high-performance order book and comb pool model.</li>
+        <li>Designed a scalable backend on Spring Boot, Kafka, Redis and MongoDB supporting limit, market, take-profit and stop-loss orders.</li>
+        <li>Shipped REST APIs and WebSocket channels for real-time order placement and updates.</li>
+        <li>Used Kafka partitioned keys for multi-threaded order processing, reaching up to 60 orders per second.</li>
+        <li>Contributed to smart contract integration for on-chain collateral and PnL management.</li>
+      </ul></div>
+    </div>
+    <div class="job rv">
+      <div class="jh"><h3>Software Engineer II (Associate)</h3><span class="co">Goldman Sachs</span><span class="when">Dec 2023 &mdash; Apr 2024 &middot; Bengaluru <i class="chev">&#9660;</i></span></div>
+      <div class="jb"><ul>
+        <li>Promoted from Analyst to Associate on the post-trade surveillance platform.</li>
+        <li>Built scalable data pipelines for post-trade surveillance using Apache Spark and Hadoop.</li>
+        <li>Created Python tooling for the support team to automate weekly report generation.</li>
+      </ul></div>
+    </div>
+    <div class="job rv">
+      <div class="jh"><h3>Software Engineer (Analyst)</h3><span class="co">Goldman Sachs</span><span class="when">Apr 2022 &mdash; Dec 2023 &middot; Bengaluru <i class="chev">&#9660;</i></span></div>
+      <div class="jb"><ul>
+        <li>Built control implementations and tooling for trade flow timeliness and completeness, plus post-trade surveillance controls across the front-to-back architecture with integrated exception management.</li>
+        <li>Developed microservices on Java Spring Boot and Kafka enabling trade replay through REST calls for existing control implementations, and exposed Swagger endpoints for the support team.</li>
+      </ul></div>
+    </div>
+    <div class="job rv">
+      <div class="jh"><h3>Software Development Engineer I</h3><span class="co">ZestMoney</span><span class="when">Aug 2021 &mdash; Apr 2022 &middot; Gurugram <i class="chev">&#9660;</i></span></div>
+      <div class="jb"><ul>
+        <li>Built event-driven microservices for loan creation, settlements, payments and closure using Java, Spring Boot, AWS SQS and SNS with MySQL.</li>
+        <li>Developed high-performance APIs for the risk team to access customer and loan data.</li>
+        <li>Built a serverless loan-closure system for automated bulk processing via file upload using AWS Lambda, Step Functions and S3.</li>
+        <li>Created a Cucumber test suite to enable behaviour-driven development for the team.</li>
+      </ul></div>
+    </div>
+    <div class="job rv">
+      <div class="jh"><h3>Analyst</h3><span class="co">BlackRock</span><span class="when">Jul 2020 &mdash; Aug 2021 &middot; Gurugram <i class="chev">&#9660;</i></span></div>
+      <div class="jb"><ul>
+        <li>Designed and developed backend applications for ETF order fulfilment, used to assist authorized participants trading in primary and secondary markets.</li>
+        <li>Built event-sourcing microservices using Java, Spring Boot, Kafka and Cassandra with resiliency and retry mechanisms to guarantee completeness.</li>
+      </ul></div>
+    </div>
+  </div>
+</div></section>
+<section id="products"><div class="wrap">
+  <div class="rv"><div class="stlab">02 &mdash; Selected product work</div>
+  <h2 class="st">Things that are live, not slide decks</h2>
+  <p class="sub">Every product below is running in production with real users. Filter by domain.</p></div>
+  <div class="chips rv">
+    <button class="chip on" data-f="all">All</button>
+    <button class="chip" data-f="trading">Trading infra</button>
+    <button class="chip" data-f="data">Real-time data</button>
+    <button class="chip" data-f="chain">On-chain</button>
+    <button class="chip" data-f="enterprise">Enterprise</button>
+  </div>
+  <div class="grid" id="pgrid">
+    <article class="card rv" data-t="data trading chain">
+      <div class="ct"><h3>ClickTrade</h3><span class="live">LIVE</span></div>
+      <div class="crole">Data Infrastructure Lead &middot; Aug 2025 &mdash; Present &middot; Rust</div>
+      <p>Real-time streaming pipeline in Rust ingesting Solana market activity, with trader analytics and portfolio tracking on top of a ClickHouse cluster.</p>
+      <div class="kv">
+        <div><b>10M+</b>events / day</div>
+        <div><b>20+</b>data streams</div>
+        <div><b>490M+</b>position rows</div>
+      </div>
+      <p>Exactly-once delivery and checkpoint-based recovery over NATS JetStream. Leaderboards, holder rankings and wallet classification served through REST and WebSocket channels. I own production reliability, cost optimisation (replaced third-party APIs with on-chain RPC) and dev/prod environment parity.</p>
+      <div class="tags"><span class="tag">Rust</span><span class="tag">NATS JetStream</span><span class="tag">ClickHouse</span><span class="tag">Solana RPC</span><span class="tag">WebSockets</span></div>
+      <div class="links"><a href="https://click.trade/discovery" target="_blank" rel="noopener">click.trade/discovery &nearr;</a></div>
+    </article>
+    <article class="card rv" data-t="trading chain">
+      <div class="ct"><h3>Carry Exchange</h3><span class="live">LIVE</span></div>
+      <div class="crole">Backend Engineer &middot; Whrrl Technologies &middot; Jun 2025 &mdash; Present</div>
+      <p>Decentralized commodity perpetuals exchange &mdash; Solidity contracts for the trading engine, vault, funding and oracle, with a Go microservices backend.</p>
+      <div class="kv">
+        <div><b>20+</b>markets</div>
+        <div><b>40+</b>REST endpoints</div>
+        <div><b>sub-second</b>response</div>
+      </div>
+      <p>Market and limit orders with take-profit and stop-loss across commodity, crypto, forex and index markets. Dynamic funding rates, automated liquidations, ERC-4626 liquidity vaults and Pyth oracle integration. TradingView charts and portfolio analytics on PostgreSQL, Redis and WebSocket streaming.</p>
+      <div class="tags"><span class="tag">Solidity</span><span class="tag">Go</span><span class="tag">ERC-4626</span><span class="tag">Pyth</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+      <div class="links"><a href="https://carry.exchange" target="_blank" rel="noopener">carry.exchange &nearr;</a><a href="https://terminal.carry.exchange" target="_blank" rel="noopener">terminal &nearr;</a></div>
+    </article>
+    <article class="card rv" data-t="enterprise chain">
+      <div class="ct"><h3>Whrrl E-WHR</h3><span class="live">LIVE</span></div>
+      <div class="crole">Backend Engineer &middot; Whrrl Technologies &middot; Jun 2025 &mdash; Present</div>
+      <p>Warehouse receipt tokenization platform on a Quorum private blockchain, letting farmers in Maharashtra borrow against stored produce.</p>
+      <div class="kv">
+        <div><b>35,000+</b>farmers</div>
+        <div><b>120,000+</b>receipts</div>
+        <div><b>50+</b>banks</div>
+      </div>
+      <p>Multi-panel Node.js / Express and Angular architecture with real-time SAP integration for customer master, warehouse receipt, lien and delivery APIs. Video KYC consent, S3 document management and a multi-bank loan workflow with maker/checker approval. I own the AWS footprint, incident response and account reconciliation tooling.</p>
+      <div class="tags"><span class="tag">Quorum</span><span class="tag">Node.js</span><span class="tag">Angular</span><span class="tag">SAP</span><span class="tag">AWS</span><span class="tag">Nginx</span></div>
+      <div class="links"><a href="https://warehouses.whrrl.in" target="_blank" rel="noopener">warehouses &nearr;</a><a href="https://bank.whrrl.in" target="_blank" rel="noopener">bank &nearr;</a><a href="https://admin.whrrl.in" target="_blank" rel="noopener">admin &nearr;</a></div>
+    </article>
+    <article class="card rv" data-t="trading chain">
+      <div class="ct"><h3>Filament Perps DEX</h3><span class="live">LIVE</span></div>
+      <div class="crole">Founding Engineer &middot; May 2024 &mdash; Jan 2025</div>
+      <p>Decentralized perpetual trading platform on SEI with a comb pool liquidity model, built from zero to launch as the founding engineer.</p>
+      <div class="kv">
+        <div><b>60/s</b>orders</div>
+        <div><b>BTC + SEI</b>markets</div>
+        <div><b>0 &rarr; 1</b>build</div>
+      </div>
+      <p>High-performance order book, Kafka partitioned keys for multi-threaded order processing, and smart contract integration for on-chain collateral and PnL.</p>
+      <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">Redis</span><span class="tag">MongoDB</span><span class="tag">Smart contracts</span></div>
+      <div class="links"><a href="https://app.filament.finance" target="_blank" rel="noopener">app.filament.finance &nearr;</a></div>
+    </article>
+  </div>
+</div></section>
+
+<section id="ai"><div class="wrap">
+  <div class="rv"><div class="stlab">03 &mdash; How I build now</div>
+  <h2 class="st">AI-native delivery</h2>
+  <p class="sub">Claude Code, Cursor and Codex are in my daily build loop, not a side experiment. I maintain my own agent skill library so the same conventions, review gates and deployment steps travel with me into every codebase.</p></div>
+  <div class="term rv">
+    <div class="tbar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span>shivam@fde &mdash; ~/clicktrade</span></div>
+    <div class="tbody" id="term"></div>
+  </div>
+  <div class="grid rv" style="margin-top:22px">
+    <div class="card"><div class="ct"><h3>Agent skill libraries</h3></div><p>Reusable Claude Code skills that encode repo conventions, test and review gates, and release steps &mdash; so an agent starts productive on day one instead of guessing.</p><div class="tags"><span class="tag">Claude Code</span><span class="tag">Skills</span><span class="tag">MCP</span></div></div>
+    <div class="card"><div class="ct"><h3>Spec-first, agent-executed</h3></div><p>I write the spec and the failing test, then let Cursor and Codex do the mechanical work. Review stays human: correctness, blast radius and operational cost.</p><div class="tags"><span class="tag">Cursor</span><span class="tag">Codex</span><span class="tag">TDD</span></div></div>
+    <div class="card"><div class="ct"><h3>Retrieval over real systems</h3></div><p>Grounding agents in actual schemas, logs and runbooks &mdash; ClickHouse tables, Kafka topics, contract ABIs &mdash; rather than generic prompts.</p><div class="tags"><span class="tag">RAG</span><span class="tag">Embeddings</span><span class="tag">Tool use</span></div></div>
+    <div class="card"><div class="ct"><h3>Forward deployed by default</h3></div><p>Sit with the people using the thing, translate their workflow into a system, ship it, then stay for the operational tail. That is how Whrrl went from a pilot to 35,000+ farmers.</p><div class="tags"><span class="tag">Discovery</span><span class="tag">Solution architecture</span><span class="tag">Post-deployment</span></div></div>
+  </div>
+</div></section>
+<section id="stack"><div class="wrap">
+  <div class="rv"><div class="stlab">04 &mdash; Stack</div>
+  <h2 class="st">What I reach for</h2>
+  <p class="sub">Chosen for the problem, not the resume. Rust when latency and correctness matter, Go for services, Java when the ecosystem wins.</p></div>
+  <div class="stack rv">
+    <div class="sgrp"><h4>Languages</h4><div class="tags"><span class="tag">Java</span><span class="tag">Rust</span><span class="tag">Go</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">Solidity</span><span class="tag">SQL</span></div></div>
+    <div class="sgrp"><h4>Frameworks</h4><div class="tags"><span class="tag">Spring Boot</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Angular</span><span class="tag">Actix</span><span class="tag">JUnit</span><span class="tag">Maven</span></div></div>
+    <div class="sgrp"><h4>Event-driven</h4><div class="tags"><span class="tag">Apache Kafka</span><span class="tag">NATS JetStream</span><span class="tag">AWS SQS</span><span class="tag">AWS SNS</span><span class="tag">AWS Lambda</span><span class="tag">Apache Flink</span></div></div>
+    <div class="sgrp"><h4>Data</h4><div class="tags"><span class="tag">ClickHouse</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Cassandra</span><span class="tag">Redis</span><span class="tag">LMDB</span><span class="tag">Elasticsearch</span><span class="tag">Apache Spark</span></div></div>
+    <div class="sgrp"><h4>AI-native</h4><div class="tags"><span class="tag">Claude Code</span><span class="tag">Cursor</span><span class="tag">Codex</span><span class="tag">Agent skills</span><span class="tag">MCP</span><span class="tag">RAG</span><span class="tag">Prompt engineering</span><span class="tag">Evals</span></div></div>
+    <div class="sgrp"><h4>Blockchain</h4><div class="tags"><span class="tag">Solana RPC</span><span class="tag">On-chain indexing</span><span class="tag">EVM</span><span class="tag">Quorum</span><span class="tag">ERC-4626</span><span class="tag">Pyth</span></div></div>
+    <div class="sgrp"><h4>Infrastructure</h4><div class="tags"><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">AWS EC2</span><span class="tag">S3</span><span class="tag">Nginx</span><span class="tag">PM2</span></div></div>
+    <div class="sgrp"><h4>Education</h4><div class="tags"><span class="tag">FDE Academy &mdash; PGP in Forward Deployed Engineering, Cohort 3</span><span class="tag">VIT &mdash; B.Tech CSE, 9.06/10</span></div></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap rv">
+  <div class="stlab" style="text-align:center">05 &mdash; Contact</div>
+  <h2>Got a system that needs shipping?</h2>
+  <p class="sub" style="margin:0 auto 34px">I am open to Forward Deployed Engineer, senior and staff backend, and solutions architecture roles. Fastest way to reach me is email.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn pri" href="mailto:shivamdixit7077@gmail.com">shivamdixit7077@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/shivam-dixit-fde/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/shivam-25" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="resume.html">R&eacute;sum&eacute;</a>
+  </div>
+</div></section>
+
+<footer><div class="inner">
+  <span>&copy; 2026 Shivam Dixit</span>
+  <a href="resume.html">R&eacute;sum&eacute;</a>
+  <a href="https://github.com/shivam-25" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://www.linkedin.com/in/shivam-dixit-fde/" target="_blank" rel="noopener">LinkedIn</a>
+  <span class="r">Built with a lot of agent help.</span>
+</div></footer>
+
+<script>
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* scroll progress + active nav */
+  var bar = document.getElementById('bar');
+  var secs = [].slice.call(document.querySelectorAll('section[id]'));
+  var nls = [].slice.call(document.querySelectorAll('a.nl'));
+  function onScroll(){
+    var h = document.documentElement;
+    var p = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    bar.style.width = (p * 100) + '%';
+    var cur = '';
+    secs.forEach(function(s){ if (s.getBoundingClientRect().top <= 140) cur = s.id; });
+    nls.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + cur); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* cursor spotlight */
+  window.addEventListener('mousemove', function(e){
+    document.documentElement.style.setProperty('--mx', e.clientX + 'px');
+    document.documentElement.style.setProperty('--my', e.clientY + 'px');
+  });
+  document.addEventListener('mousemove', function(e){
+    var c = e.target.closest ? e.target.closest('.card') : null;
+    if(!c) return;
+    var r = c.getBoundingClientRect();
+    c.style.setProperty('--cx', (e.clientX - r.left) + 'px');
+    c.style.setProperty('--cy', (e.clientY - r.top) + 'px');
+  });
+
+  /* reveal */
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, {threshold:0.12});
+  [].slice.call(document.querySelectorAll('.rv')).forEach(function(el){ io.observe(el); });
+
+  /* counters */
+  function fmt(n){ return n >= 1000 ? n.toLocaleString('en-US') : String(n); }
+  var cio = new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(!en.isIntersecting) return;
+      var el = en.target, to = parseFloat(el.dataset.to), suf = el.dataset.suf || '', t0 = null, dur = 1400;
+      function step(t){
+        if(!t0) t0 = t;
+        var k = Math.min((t - t0) / dur, 1);
+        var e = 1 - Math.pow(1 - k, 3);
+        el.textContent = fmt(Math.round(to * e)) + suf;
+        if(k < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      cio.unobserve(el);
+    });
+  }, {threshold:0.5});
+  [].slice.call(document.querySelectorAll('.stat .n')).forEach(function(el){ cio.observe(el); });
+
+  /* typewriter */
+  var roles = ['Forward Deployed Engineer','Senior Software Engineer','AI-native systems builder','Distributed systems engineer','0 to 1 product engineer'];
+  var tw = document.getElementById('tw'), ri = 0, ci = 0, del = false;
+  function tick(){
+    var w = roles[ri];
+    ci += del ? -1 : 1;
+    tw.textContent = w.slice(0, ci);
+    var wait = del ? 34 : 62;
+    if(!del && ci === w.length){ del = true; wait = 1700; }
+    else if(del && ci === 0){ del = false; ri = (ri + 1) % roles.length; wait = 260; }
+    setTimeout(tick, wait);
+  }
+  tick();
+
+  /* experience accordion */
+  [].slice.call(document.querySelectorAll('.job')).forEach(function(j, i){
+    var head = j.querySelector('.jh'), body = j.querySelector('.jb');
+    function set(open){
+      j.classList.toggle('open', open);
+      body.style.maxHeight = open ? (body.scrollHeight + 40) + 'px' : '0px';
+    }
+    head.addEventListener('click', function(){ set(!j.classList.contains('open')); });
+    if(i === 0) setTimeout(function(){ set(true); }, 500);
+  });
+
+  /* product filter */
+  var chips = [].slice.call(document.querySelectorAll('.chip'));
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on');
+      var f = c.dataset.f;
+      [].slice.call(document.querySelectorAll('#pgrid .card')).forEach(function(card){
+        var show = f === 'all' || card.dataset.t.indexOf(f) > -1;
+        card.classList.toggle('hide', !show);
+      });
+    });
+  });
+
+  /* terminal */
+  var lines = [
+    ['p', '$ claude "add checkpoint recovery to the ingest pipeline"'],
+    ['', '  reading 20+ stream configs, ClickHouse schema, runbook...'],
+    ['w', '  plan: idempotent writer + offset checkpoints + replay test'],
+    ['g', '  + 3 files changed, 1 test added'],
+    ['p', '$ cargo test --release'],
+    ['g', '  ok. 10M+ events/day replayed, zero duplicates'],
+    ['p', '$ git push && deploy prod'],
+    ['g', '  shipped.'],
+    ['', ''],
+    ['', '  the spec and the review are mine. the typing is not.']
+  ];
+  var term = document.getElementById('term');
+  function runTerm(){
+    term.innerHTML = '';
+    var li = 0;
+    function nextLine(){
+      if(li >= lines.length){ setTimeout(runTerm, 5200); return; }
+      var cls = lines[li][0], txt = lines[li][1];
+      var span = document.createElement('span');
+      if(cls) span.className = cls;
+      term.appendChild(span);
+      var k = 0;
+      function ch(){
+        span.textContent = txt.slice(0, k);
+        k++;
+        if(k <= txt.length) setTimeout(ch, rm ? 0 : 16);
+        else { term.appendChild(document.createTextNode('\n')); li++; setTimeout(nextLine, 320); }
+      }
+      ch();
+    }
+    nextLine();
+  }
+  var tio = new IntersectionObserver(function(es){
+    if(es[0].isIntersecting){ runTerm(); tio.disconnect(); }
+  }, {threshold:0.3});
+  tio.observe(term);
+
+  /* background network */
+  if(!rm){
+    var cv = document.getElementById('net'), cx = cv.getContext('2d'), pts = [], W, H;
+    function size(){
+      W = cv.width = window.innerWidth; H = cv.height = window.innerHeight;
+      var n = Math.min(70, Math.round(W * H / 26000));
+      pts = [];
+      for(var i = 0; i < n; i++) pts.push({x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22});
+    }
+    size(); window.addEventListener('resize', size);
+    (function draw(){
+      cx.clearRect(0,0,W,H);
+      for(var i = 0; i < pts.length; i++){
+        var p = pts[i];
+        p.x += p.vx; p.y += p.vy;
+        if(p.x < 0 || p.x > W) p.vx *= -1;
+        if(p.y < 0 || p.y > H) p.vy *= -1;
+        cx.beginPath(); cx.arc(p.x, p.y, 1.3, 0, 6.284);
+        cx.fillStyle = 'rgba(132,216,232,0.5)'; cx.fill();
+        for(var j = i + 1; j < pts.length; j++){
+          var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = dx*dx + dy*dy;
+          if(d < 20000){
+            cx.beginPath(); cx.moveTo(p.x, p.y); cx.lineTo(q.x, q.y);
+            cx.strokeStyle = 'rgba(79,176,198,' + (0.16 * (1 - d / 20000)) + ')';
+            cx.lineWidth = 1; cx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(draw);
+    })();
+  }
+})();
+</script>
+</body>
+</html>
